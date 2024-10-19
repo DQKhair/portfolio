@@ -1,0 +1,23 @@
+/* mobile */
+@media (max-width: 740px){
+    #welcome {
+       height: 100%;
+    }
+    #about {
+        height: 100%;
+    }
+    #portfolio {
+       height: 100%;
+    }
+    #port img {
+        width: 75%;
+    }
+    #email {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+/* tablet */
+@media (min-width: 740px) and (max-width: 1024px){
+   
+}

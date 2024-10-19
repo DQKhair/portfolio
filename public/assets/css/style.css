@@ -29,7 +29,7 @@ body {
   #welcome {
     font-family: 'Amatic SC', cursive;
     color: #FCFFFF;
-    background: url("https://images.unsplash.com/photo-1423589989400-cc0270157ed0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=458cf2662814c68b6eb24d9e55801fa0");
+    background: url("../images/bgHeader.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
