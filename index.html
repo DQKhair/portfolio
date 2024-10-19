@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="./public/assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./public/assets/fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- BACK TO TOP ARROW -->
+    <a class="smoothScroll" href="#welcome"
+      ><img
+        id="btt"
+        class="img-responsive"
+        src="http://allfordance.com/image/orbital-arrow-up.png"
+    /></a>
+
+    <!-- NAV -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a class="smoothScroll" href="#welcome" onclick="closeNav()">Home</a>
+        <a class="smoothScroll" href="#about" onclick="closeNav()">About</a>
+        <a class="smoothScroll" href="#portfolio" onclick="closeNav()"
+          >Portfolio</a
+        >
+      </div>
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span id="openmenu" onclick="openNav()"><b>Menu</b></span>
+
+    <center>
+      <!-- WELCOME -->
+      <div id="welcome">
+        <h1>Dinh Quang Khai (K02)</h1>
+        <h3><b>Web & app mobile Developer</b></h3>
+        <a class="smoothScroll" href="#about"
+          ><img id="press" src="./public/assets/images/arrowDown.png"
+        /></a>
+      </div>
+    </center>
+
+    <!-- ABOUT -->
+    <div id="about">
+      <h1>About Me</h1>
+      <center>
+        <div id="self">
+          <img
+            class="img-responsive"
+            src="https://haycafe.vn/wp-content/uploads/2022/01/Hinh-anh-Sai-Gon-ve-dem-lung-linh-anh-den.jpeg"
+            alt="Img"
+          />
+        </div>
+      </center>
+      <br />
+      <p>
+        Hi! I’m Quang Khai, and web development is my passion.<br /><br />
+        I help people build websites they love, and I absolutely adore making
+        people smile.<br /><br />
+        <br />If you'd like, scroll down to see some examples of my work!<br />
+      </p>
+      <br /><br />
+      <span id="email">
+        <i class="fa-regular fa-envelope"></i>
+        quangkhaidinh2307@gmail.com</span
+      >
+      <span id="portScroll">
+        <a class="smoothScroll" href="#portfolio"
+          ><i class="fa-solid fa-briefcase"></i> View My Portfolio</a
+        ></span
+      >
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="portfolio">
+      <h1>Portfolio</h1>
+      <h3>
+        Here you'll find some projects I've worked on! Click on a project to see
+        a demo of it.
+      </h3>
+      <br />
+      <center>
+        <div id="port" class="container">
+          <table>
+            <!-- PORTFOLIO -->
+            <tr>
+              <a
+                target="_blank"
+                href="https://flowerstore.bsite.net/"
+                ><img
+                  class="img-responsive thumbnail"
+                  src="./public/assets/images/webFlowerStore.png"
+                  alt="img_page_flowerStore"
+              /></a>
+            </tr>
+            <!-- UPWORK -->
+            <tr>
+              <a
+                target="_blank"
+                href="https://shopnaturalvn.bsite.net"
+                ><img
+                  class="img-responsive thumbnail"
+                  src="./public/assets/images/webNaturalShop.png"
+                  alt="img_page_naturalShop"
+              /></a>
+            </tr>
+            <!-- TRIBUTE PAGE -->
+            <tr>
+              <a
+                target="_blank"
+                href="https://youtu.be/dcxeldHXzSU"
+                ><img
+                  class="img-responsive thumbnail"
+                  src="./public/assets/images/web_MyBarber.png"
+                  alt="img_page_My_barber"
+              /></a>
+            </tr>
+          </table>
+        </div>
+      </center>
+    </div>
+    <script>
+      /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+
+      $(function () {
+        // This will select everything with the class smoothScroll
+        // This should prevent problems with carousel, scrollspy, etc...
+        $(".smoothScroll").click(function () {
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html,body").animate(
+                {
+                  scrollTop: target.offset().top,
+                },
+                1300
+              ); // The number here represents the speed of the scroll in milliseconds
+              return false;
+            }
+          }
+        });
+      });
+
+      // Change the speed to whatever you want
+      // Personally i think 1000 is too much
+      // Try 800 or below, it seems not too much but it will make a difference
+    </script>
+  </body>
+</html>
